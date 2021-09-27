@@ -1,0 +1,85 @@
+.ff-title {
+  font-family: Arial; }
+
+body {
+  background: #444;
+  color: #f4f4f4;
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.4;
+  margin: 0;
+  padding: 0;
+  overflow: hidden; }
+
+.page {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 0 4rem; }
+  .page h1 {
+    font-size: 4rem;
+    line-height: 1.2;
+    margin: 1rem; }
+  .page p {
+    font-size: 1.3rem; }
+
+.btn {
+  display: inline-block;
+  padding: 1rem 2rem;
+  background-color: #f4f4f4;
+  color: #444;
+  text-decoration: none;
+  border: none;
+  margin-top: 1rem;
+  font-size: 1.1rem;
+  transition-property: all;
+  transition-duration: 0.5s;
+  transition-timing-function: ease-in; }
+
+.btn:hover,
+.btn-dark {
+  background: #444;
+  color: #f4f4f4; }
+
+.btn-dark:hover {
+  background: #f4f4f4;
+  color: #444; }
+
+#page-1 {
+  background-color: steelblue; }
+
+#page-2 {
+  background-color: tan; }
+
+#page-3 {
+  background-color: teal; }
+
+#page-4 {
+  background-color: slateblue; }
+
+#page-5 {
+  background-color: darkred; }
+
+#page-1 h1 {
+  transform: translateY(-1200px);
+  animation-name: heading;
+  animation-duration: 2s;
+  animation-fill-mode: forwards;
+  animation-timing-function: ease-in-out; }
+
+#page-1 p {
+  transform: translateX(-1200px);
+  animation-name: paragraph;
+  animation-duration: 2s;
+  animation-fill-mode: forwards;
+  animation-delay: 2.5s; }
+
+@keyframes heading {
+  to {
+    transform: translateY(0); } }
+
+@keyframes paragraph {
+  to {
+    transform: translateX(0); } }

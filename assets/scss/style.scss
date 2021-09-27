@@ -1,0 +1,118 @@
+// @font-face {
+//    font-family: 'Bison';
+//    src: url('../fonts/Bison-Bold.woff2') format('woff2'),
+//        url('../fonts/Bison-Bold.woff') format('woff');
+//    font-weight: 300;
+//    font-style: normal;
+//    font-display: swap;
+// }
+
+@import "variables";
+
+.ff-title {
+  font-family: $ff-title;
+}
+
+body {
+  background: $dark-color;
+  color: $light-color;
+  font-family: $ff-regular;
+  line-height: 1.4;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+.page {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 0 4rem;
+
+  h1 {
+    font-size: 4rem;
+    line-height: 1.2;
+    margin: 1rem;
+  }
+
+  p {
+    font-size: 1.3rem;
+  }
+}
+
+.btn {
+  display: inline-block;
+  padding: 1rem 2rem;
+  background-color: $light-color;
+  color: $dark-color;
+  text-decoration: none;
+  border: none;
+  margin-top: 1rem;
+  font-size: 1.1rem;
+  transition-property: all;
+  transition-duration: 0.5s;
+  transition-timing-function: ease-in;
+}
+
+.btn:hover,
+.btn-dark {
+  background: $dark-color;
+  color: $light-color;
+}
+
+.btn-dark:hover {
+  background: $light-color;
+  color: $dark-color;
+}
+
+// Page Colors
+
+#page-1 {
+  background-color: $page-1-color;
+}
+#page-2 {
+  background-color: $page-2-color;
+}
+#page-3 {
+  background-color: $page-3-color;
+}
+#page-4 {
+  background-color: $page-4-color;
+}
+#page-5 {
+  background-color: $page-5-color;
+}
+
+// Page Animations
+
+#page-1 h1 {
+  transform: translateY(-1200px);
+  animation-name: heading;
+  animation-duration: $animate-speed;
+  animation-fill-mode: forwards;
+  animation-timing-function: ease-in-out;
+}
+
+#page-1 p {
+  transform: translateX(-1200px);
+  animation-name: paragraph;
+  animation-duration: $animate-speed;
+  animation-fill-mode: forwards;
+  animation-delay: 2.5s;
+}
+
+// KeyFrames
+@keyframes heading {
+  to {
+    transform: translateY(0);
+  }
+}
+
+@keyframes paragraph {
+  to {
+    transform: translateX(0);
+  }
+}
